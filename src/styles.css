@@ -1,0 +1,156 @@
+/**
+ * React TikTok Style Video Scroller - Base Styles
+ *
+ * Import this file if you want the base styles.
+ * These styles are optional - all critical styles are inline.
+ */
+
+/* Hide scrollbar for all browsers */
+.react-tiktok-scroller {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.react-tiktok-scroller::-webkit-scrollbar {
+  display: none;
+}
+
+/* Video container */
+.react-tiktok-video-item {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Video element */
+.react-tiktok-video-element {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  background-color: #000;
+}
+
+/* Responsive aspect ratio for mobile */
+@media (min-width: 640px) {
+  .react-tiktok-video-item {
+    aspect-ratio: 9 / 16;
+    max-width: 400px;
+  }
+}
+
+/* Control buttons */
+.react-tiktok-control-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.15s ease;
+}
+
+.react-tiktok-control-button:hover {
+  transform: scale(1.1);
+}
+
+.react-tiktok-control-button:active {
+  transform: scale(0.95);
+}
+
+/* Progress bar */
+.react-tiktok-progress-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  cursor: pointer;
+  padding-top: 24px;
+}
+
+.react-tiktok-progress-bar {
+  width: 100%;
+  transition: height 0.1s ease;
+}
+
+.react-tiktok-progress-container:hover .react-tiktok-progress-bar {
+  height: 6px !important;
+}
+
+.react-tiktok-progress-fill {
+  height: 100%;
+  transition: width 0.1s linear;
+}
+
+/* Muted indicator animation */
+.react-tiktok-muted-indicator {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Loading spinner */
+.react-tiktok-spinner {
+  display: inline-block;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Loading more indicator */
+.react-tiktok-loading-more {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+
+/* Video info text shadow for readability */
+.react-tiktok-video-info h3,
+.react-tiktok-video-info p {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Touch-friendly tap targets */
+@media (pointer: coarse) {
+  .react-tiktok-control-button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .react-tiktok-muted-indicator,
+  .react-tiktok-spinner {
+    animation: none;
+  }
+
+  .react-tiktok-control-button {
+    transition: none;
+  }
+
+  .react-tiktok-progress-fill {
+    transition: none;
+  }
+}

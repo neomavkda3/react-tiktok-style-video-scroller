@@ -1,0 +1,75 @@
+{
+  "name": "react-tiktok-style-video-scroller",
+  "version": "1.0.0",
+  "description": "A TikTok-style vertical video scroller component for React with infinite scrolling, virtual rendering, and full customization",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./styles.css": "./dist/styles.css"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean && cp src/styles.css dist/styles.css",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "lint": "eslint src --ext .ts,.tsx",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "react",
+    "tiktok",
+    "video",
+    "scroller",
+    "infinite-scroll",
+    "virtual-scroll",
+    "video-feed",
+    "shorts",
+    "reels",
+    "vertical-video"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neomavkda3/react-tiktok-style-video-scroller.git"
+  },
+  "bugs": {
+    "url": "https://github.com/neomavkda3/react-tiktok-style-video-scroller/issues"
+  },
+  "homepage": "https://github.com/neomavkda3/react-tiktok-style-video-scroller#readme",
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "dependencies": {
+    "@tanstack/react-virtual": "^3.13.12",
+    "react-intersection-observer": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^9.0.0",
+    "eslint-plugin-react": "^7.37.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.5.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
