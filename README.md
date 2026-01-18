@@ -6,9 +6,6 @@
 
 A high-performance, TikTok-style vertical video scroller component for React. Build engaging short-form video experiences with virtual scrolling, infinite loading, auto-play, and full customization.
 
-<!-- TODO: Add demo GIF here -->
-<!-- ![Demo](./docs/demo.gif) -->
-
 ## Features
 
 - **Virtual Scrolling** - Renders only visible videos for optimal performance with large lists
