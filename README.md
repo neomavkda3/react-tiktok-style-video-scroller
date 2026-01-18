@@ -1,6 +1,7 @@
 # React TikTok Style Video Scroller
 
 [![npm version](https://img.shields.io/npm/v/react-tiktok-style-video-scroller.svg)](https://www.npmjs.com/package/react-tiktok-style-video-scroller)
+[![CI](https://github.com/neomavkda3/react-tiktok-style-video-scroller/actions/workflows/ci.yml/badge.svg)](https://github.com/neomavkda3/react-tiktok-style-video-scroller/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
 
